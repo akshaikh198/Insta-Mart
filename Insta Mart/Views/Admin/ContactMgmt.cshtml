@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "ContactMgmt";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+@model List<Insta_Mart.Models.contact>
+
+	
+    <main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-th-list"></i> Data Table</h1>
+          <p>Table to display analytical data effectively</p>
+        </div>
+        <ul class="app-breadcrumb breadcrumb side">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item">Tables</li>
+          <li class="breadcrumb-item active"><a href="#">Data Table</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tile">
+            <div class="tile-body">
+              <table class="table table-hover table-bordered" id="sampleTable">
+                <thead class="bg-primary" style="font-size:20px">
+                  <tr>
+                    <th>Sr No.</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                      <th>Message</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody style="font-weight:bold">
+                    @{
+                        foreach (var x in Model)
+                        {
+                        
+                            <tr>
+                                <td>@x.Id</td>
+                                <td>@x.name</td>
+                                <td>@x.mobile</td>
+                                <td>@x.email</td>
+                                <td>@x.message</td>
+                                <td><a href="#" class="fa fa-edit" style="font-size:25px; color:blue"></a></td>
+                                <td><a href="#" class="fa fa-trash" style="font-size:25px; color:red"></a></td>
+
+                            </tr>
+                        
+                        }
+                    }
+                    
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  
+
+    <script type="text/javascript">$('#sampleTable').DataTable();</script>
+    <!-- Google analytics script-->
+   

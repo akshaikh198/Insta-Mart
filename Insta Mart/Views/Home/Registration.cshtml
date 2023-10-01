@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/InstaMartMasterPage.cshtml";
+}
+
+<div class="hont-sans login bg-cover" style="background-image:url(../Content/img/loginbg.jpeg);">
+
+
+<div class="container mx-auto h-full flex flex-1 justify-center items-center">
+    <div class="w-full max-w-lg">
+        <div class="leading-loose">
+            <form class="max-w-xl m-4 p-10 bg-white rounded shadow-xl" action="/Home/Registration" method="post">
+                <p class="text-gray-800 font-medium" style="font-size:45px; text-align:center">Register</p>
+                <hr />
+                <div class="mt2">
+                    <label>Name</label>
+                    <input name="name" type="text"  placeholder="Your Name"/>  <br />    <br />          
+                
+                    <label>Email</label>
+                    <input name="email" type="email" placeholder="Your Email"><br /><br />
+
+                  <label>Mobile</label>
+                    <input name="mobile" type="text" placeholder="Your mobile"><br /><br />
+
+                    <label>Password</label>
+                    <input name="password" type="password"placeholder=" Password"/>
+                </div>
+                
+                <div class="mt-4">
+                    <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit" >Register</button>
+                </div>
+                <a class="inline-block right-0 align-baseline font-bold text-sm text-500 hover:text-blue-800" href="/Home/login">
+                    Already have an account ?
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</div>

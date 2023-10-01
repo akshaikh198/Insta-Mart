@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/InstaMartMasterPage.cshtml";
+}
+
+
+
+<div class="h-screen font-sans login bg-cover" style="background-image:url(../Content/img/loginbg.jpeg);">
+<div class="container mx-auto h-full login flex flex-1 justify-center items-center"  >
+  <div class="w-full max-w-lg">
+    <div class="leading-loose">
+      <form class="max-w-xl m-4 p-10 bg-white rounded shadow-xl" action="/Home/Login" method="post">
+        <p class="text-gray-800 font-medium text-center text-lg font-bold" style="font-size:45px">Login</p>
+        <div class="mt-2">
+          <label>Email</label><br />
+          <input  name="email" type="email" placeholder="Email"/><hr />
+        </div>
+        <div class="mt-2">
+          <label>Password</label><br />
+          <input name="password" type="password" placeholder="Password"/><hr />
+        </div>
+        <div class="mt-4 items-center justify-between">
+          <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit">Login</button>
+          <a class="inline-block right-0 align-baseline  font-bold text-sm text-500 hover:text-blue-800" href="#">
+            Forgot Password?
+          </a>
+
+            <a class="inline-block right-0 align-baseline font-bold text-sm text-500 hover:text-blue-800" href="#">
+          Not registered ?
+        </a>
+        </div>
+        
+      </form>
+
+    </div>
+      </div>
+  </div>
+</div>
+    
+  
