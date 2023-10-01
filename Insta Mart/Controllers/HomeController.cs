@@ -9,6 +9,7 @@ namespace Insta_Mart.Controllers
 {
     public class HomeController : Controller
     {
+
         //
         // GET: /Home/
         InstaMartDBEntities db = new InstaMartDBEntities();
